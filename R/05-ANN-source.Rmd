@@ -189,7 +189,7 @@ Visualize training performance using confusion matrix, chord diagram and feature
 
 ### Confusion Matrix
 
-```{r AccuracyConfusion, fig.width=4, fig.asp=1}
+```{r AccuracyConfusion1, fig.width=4, fig.asp=1}
 source('./other/precision_recall_balAcc.R')
 
 # Average Confusion Matrix (percent)
@@ -279,7 +279,7 @@ tp1removed <- tp1removed[tp.or]
 
 
 
-```{r TruePosPlot, fig.asp=1, fig.width=3}
+```{r TruePosPlot1, fig.asp=1, fig.width=3}
 par(pty='s', mar=c(4,4,1,1)+0.1, pty='s')
 plot(mBMMNC@dr$tsne@cell.embeddings[tp, ], pch=19, cex=.25, col='grey', las=1,
      main='misclassification', xlab="Dimension 1", ylab="Dimension 2",
@@ -333,7 +333,7 @@ hBMMNC@meta.data$NN_predict.consensus <- modell.predict.human.consensus
 
 ### Performance metrics (confusion, balanced Acc, precision, recall)
 
-```{r AccuracyConfusion, fig.width=4, fig.asp=1}
+```{r AccuracyConfusion2, fig.width=4, fig.asp=1}
 # calculate frequency table
 cfm.freq.human.consensus <- table(list(predicted=modell.predict.human.consensus, true=hIdent),
                                   useNA = 'always')
